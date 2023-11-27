@@ -9,8 +9,21 @@
  */
 int check_cycle(listint_t *list)
 {
-	while (list && list->next && list->next->next)
-		return (1);
+	listint_t *current_node, *next_node;
+
+	if (list == NULL)
+		return (0);
+
+	current_node = list;
+	next_node = list->next;
+
+	 while (current_node && next_node && next_node->next)
+	 {
+		 if (current_node == next_node)
+			 return (1);
+		 current_node = current_node->next;
+		 next_node = next_node->next->next;
+	 }
 
 	return (0);
 }
