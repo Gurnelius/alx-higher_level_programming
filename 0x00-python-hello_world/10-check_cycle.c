@@ -9,7 +9,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	if (list->next->next != NULL)
+	while (list && list->next && list->next->next)
 		return (1);
 	
 	return (0);
