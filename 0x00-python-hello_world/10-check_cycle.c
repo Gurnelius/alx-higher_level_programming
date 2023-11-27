@@ -11,6 +11,6 @@ int check_cycle(listint_t *list)
 {
 	while (list && list->next && list->next->next)
 		return (1);
-	
+
 	return (0);
 }
