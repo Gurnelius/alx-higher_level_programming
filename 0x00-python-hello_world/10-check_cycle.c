@@ -9,10 +9,8 @@
  */
 int check_cycle(listint_t *list)
 {
-	if (list == NULL)
-	{
-		return (0);
-	}
-	else
+	if (list->next->next != NULL)
 		return (1);
+	
+	return (0);
 }
