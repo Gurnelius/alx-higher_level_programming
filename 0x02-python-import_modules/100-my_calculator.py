@@ -6,6 +6,7 @@ from sys import argv
 if __name__ == "__main__":
     if len(argv) < 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     else:
         if argv[2] not in ('+', '-', '/', '*'):
             print("Unknown operator. Available operators: +, -, * and /")
@@ -21,3 +22,4 @@ if __name__ == "__main__":
                 print("{} * {} = {}".format(a, b, mul(a, b)))
             elif argv[2] == "/":
                 print("{} / {} = {}".format(a, b, div(a, b)))
+            exit(0)
