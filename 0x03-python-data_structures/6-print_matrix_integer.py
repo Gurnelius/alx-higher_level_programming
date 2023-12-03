@@ -5,7 +5,7 @@ def print_matrix_integer(matrix=[[]]):
         size = len(i)
         for j in i:
             if j != i[size-1]:
-                print(j, end=" ")
+                print("{:d}".format(j), end=" ")
             else:
-                print(j, end='')
-        print('$')
+                print("{:d}".format(j), end='')
+        print("$")
