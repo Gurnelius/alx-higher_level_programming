@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    diff = len(tuple_a) - len(tuple_b)
-    if diff < 0:
-        for i in range(abs(diff)):
-            tuple_a = tuple_a + (0,)
-    elif diff > 0:
-        for i in range(abs(diff)):
-            tuple_b = tuple_b + (0,)
-    result_tuple = tuple(x + y for x, y in zip(tuple_a, tuple_b))
-
-    return result_tuple
+    result_tuple = []
+    for i in range(2):
+        try:
+            a = tuple_a[i]
+        except:
+            a = 0
+        try:
+            b = tuple_b[i]
+        except:
+            b = 0
+        result_tuple.append(a + b)
+    return tuple(result_tuple)
