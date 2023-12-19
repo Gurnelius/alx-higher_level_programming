@@ -2,13 +2,10 @@
 
 class Square:
     '''
-    This is an empty class defining a square.
-
+    This class defines an empty square.
     Attributes:
-        No attributes.
+        No attributes defined.
+    Methods:
+        No methods defined.
     '''
-    def __init__(self):
-        '''
-        Init method for the class.
-        '''
-        pass
+    pass
