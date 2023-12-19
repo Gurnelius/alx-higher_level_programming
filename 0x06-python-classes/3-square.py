@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 
+''' Define a Square class'''
+
+
 class Square:
     '''
-    This is an empty class defining a square.
+    This is a class defining a square.
 
     Attributes:
-        No attributes        
+        No attributes
     '''
+
     def __init__(self, size=0):
         '''
         Init method for the class.
-
         Args:
             size (int): Size of the square.
         '''
@@ -21,4 +24,11 @@ class Square:
         self.__size = size
 
     def area(self):
+        '''
+        Calculate the area of the square
+        Args:
+            None
+        Returns:
+            int: area of the square
+        '''
         return self.__size * self.__size
