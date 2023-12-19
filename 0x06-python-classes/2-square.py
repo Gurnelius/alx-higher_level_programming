@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''Define a class Square'''
+'''Define a class Square.'''
 
 
 class Square:
     '''
-    This is an empty class defining a square.
+    This is a class defining a square.
     Attributes:
         No attributes
     '''
@@ -19,6 +19,6 @@ class Square:
         '''
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >=0")
         self.__size = size
