@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
+'''Define a class Square'''
+
+
 class Square:
     '''
     This is an empty class defining a square.
-
     Attributes:
         No attributes
     '''
+
     def __init__(self, size=0):
         '''
         Init method for the class.
