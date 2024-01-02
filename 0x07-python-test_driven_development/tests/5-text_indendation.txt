@@ -1,0 +1,27 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation("This is a sentence. Another sentence? Yet another one: The end.")
+This is a sentence.
+<BLANKLINE>
+Another sentence?
+<BLANKLINE>
+Yet another one:
+<BLANKLINE>
+The end.
+
+>>> text_indentation("One sentence without special characters")
+One sentence without special characters
+
+>>> text_indentation("Sentence ending with dot only.")
+Sentence ending with dot only.
+
+>>> text_indentation("Sentence ending with question mark only?")
+Sentence ending with question mark only?
+
+>>> text_indentation("Sentence ending with colon only:")
+Sentence ending with colon only:
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
