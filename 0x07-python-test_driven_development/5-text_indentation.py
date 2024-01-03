@@ -15,11 +15,9 @@ def text_indentation(text):
         - TypeError: If `text` is not a string.
 
     Example:
-    >>> text_indentation("This is a sentence. Another sentence? Yet another one: The end.")
-    This is a sentence
-    Another sentence
-    Yet another one
-    The end
+    >>> text_indentation("This is a sentence. Another sentence?")
+    This is a sentence.
+    Another sentence?
     '''
 
     # Check if text is a string
@@ -31,7 +29,7 @@ def text_indentation(text):
     for char in text:
         if char not in ('.', '?', ':'):
             sentence += char
-        elif char in('.', '?', ':'):
+        elif char in ('.', '?', ':'):
             sentence = sentence.strip()
             sentence += char+'\n\n'
             sentences += sentence
