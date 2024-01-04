@@ -111,28 +111,31 @@ class Rectangle:
         else:
             return self.__height * 2 + self.__width * 2
 
-    def __str__(self):
-        rect = ""
-        self.print_symbol = str(self.print_symbol)
-        if self.__height == 0 or self.__width == 0:
-            rect = ""
-        else:
-            for h in range(self.__height):
-                if h != self.__height - 1:
-                    rect += self.print_symbol * self.__width + "\n"
-                else:
-                    rect += self.print_symbol * self.__width
-        return rect
-
-    def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Compare two Rectangle instances and return
+        the one with the equal or greater area.
+
+        Parameters:
+            rect_1 (Rectangle): The first rectangle instance for comparison.
+            rect_2 (Rectangle): The second rectangle instance for comparison.
+
+        Raises:
+            TypeError: If either rect_1 or rect_2 is not an instance of the
+            Rectangle class.
+
+        Returns:
+            Rectangle: The larger or equal Rectangle instance based on area.
+
+        Example:
+            # Create two rectangles
+            rect1 = Rectangle(4, 5)
+            rect2 = Rectangle(3, 6)
+
+            # Get the larger or equal rectangle
+            larger_rect = Rectangle.bigger_or_equal(rect1, rect2)
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
@@ -163,3 +166,58 @@ class Rectangle:
             square_instance = Rectangle.square(5)
         """
         return cls(size, size)
+
+    def __str__(self):
+        """
+        Return a string representation of the Rectangle instance.
+
+        Returns:
+            str: A string representation of the rectangle using
+            the print_symbol character.
+        Example:
+            # Create a rectangle and get its string representation
+            rectangle_instance = Rectangle(3, 4)
+            print(str(rectangle_instance))
+        """
+        rect = ""
+        self.print_symbol = str(self.print_symbol)
+        if self.__height == 0 or self.__width == 0:
+            rect = ""
+        else:
+            for h in range(self.__height):
+                if h != self.__height - 1:
+                    rect += self.print_symbol * self.__width + "\n"
+                else:
+                    rect += self.print_symbol * self.__width
+        return rect
+
+    def __repr__(self):
+        """
+        Return a string representation of the Rectangle
+        instance for recreation using eval().
+
+        Returns:
+            str: A string representation of the rectangle
+            in the format 'Rectangle(width, height)'.
+
+        Example:
+            # Create a rectangle and get its string
+            representation for recreation
+            rectangle_instance = Rectangle(3, 4)
+            repr_string = repr(rectangle_instance)
+            new_instance = eval(repr_string)
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """
+        Destructor method to decrement the number_of_instances
+        attribute and print a farewell message.
+
+        Example:
+            # Delete a rectangle instance
+            del rectangle_instance
+            # Output: Bye rectangle...
+        """
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
