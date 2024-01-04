@@ -90,9 +90,9 @@ class Rectangle:
         - ValueError: If height is less than 0.
         """
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
 
@@ -165,7 +165,7 @@ class Rectangle:
             # Create a square with size 5
             square_instance = Rectangle.square(5)
         """
-        return (cls(size, size))
+        return cls(size, size)
 
     def __str__(self):
         """
