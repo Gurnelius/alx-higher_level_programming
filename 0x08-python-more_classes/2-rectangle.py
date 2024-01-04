@@ -96,13 +96,13 @@ class Rectangle:
 
     def area(self):
         """
-        Getter method to retrieve the height of the rectangle.
+        Getter method to retrieve the area of the rectangle.
         """
         return self.__height * self.__width
 
     def perimeter(self):
         """
-        Getter method to retrieve the height of the rectangle.
+        Getter method to retrieve the perimeter of the rectangle.
         """
         if self.__height == 0 or self.__width == 0:
             return 0
