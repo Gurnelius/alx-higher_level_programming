@@ -165,7 +165,7 @@ class Rectangle:
             # Create a square with size 5
             square_instance = Rectangle.square(5)
         """
-        return cls(size, size)
+        return (cls(size, size))
 
     def __str__(self):
         """
