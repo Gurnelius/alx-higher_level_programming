@@ -4,7 +4,7 @@
 '''
 
 
-class Reactange:
+class Rectangle:
     '''
     This class defines an empty rectangle.
     Attributes:
