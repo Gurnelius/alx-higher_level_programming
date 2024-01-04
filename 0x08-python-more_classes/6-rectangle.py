@@ -39,7 +39,7 @@ class Rectangle:
         - width (int): The width of the rectangle (default is 0).
         - height (int): The height of the rectangle (default is 0).
         """
-        self.number_of_instaces += 1 
+        Rectangle.number_of_instances += 1
         self.__width = width
         self.__height = height
 
@@ -126,4 +126,5 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
