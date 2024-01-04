@@ -29,6 +29,7 @@ class Rectangle:
         Getter method to retrieve the height of the rectangle.
         Setter method to set the height of the rectangle.
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -38,7 +39,7 @@ class Rectangle:
         - width (int): The width of the rectangle (default is 0).
         - height (int): The height of the rectangle (default is 0).
         """
-
+        self.number_of_instaces += 1 
         self.__width = width
         self.__height = height
 
