@@ -39,9 +39,9 @@ class Rectangle:
         - height (int): The height of the rectangle (default is 0).
         """
         if not isinstance(height, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if height < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = height
 
@@ -72,9 +72,9 @@ class Rectangle:
         - ValueError: If height is less than 0.
         """
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
 
