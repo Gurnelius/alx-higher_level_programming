@@ -38,8 +38,18 @@ class Rectangle:
         - width (int): The width of the rectangle (default is 0).
         - height (int): The height of the rectangle (default is 0).
         """
+        if not isinstance(height, int):
+            raise TypeError("width must be an integer")
+        if height < 0:
+            raise ValueError("width must be >= 0")
 
         self.__height = height
+
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if height < 0:
+            raise ValueError("width must be >= 0")
+
         self.__width = width
 
     @property
