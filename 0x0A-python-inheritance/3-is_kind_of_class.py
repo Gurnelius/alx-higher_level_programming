@@ -26,5 +26,4 @@ def is_kind_of_class(obj, a_class):
     >>> is_kind_of_class(5, int)
     True
     """
-    if type(obj) is a_class or isinstance(obj, a_class):
-        return True
+    return isinstance(obj, a_class)
