@@ -19,3 +19,13 @@
 >>> duplicate_list = MyList([3, 1, 4, 1, 5, 9, 2, 6, 9, 5, 3, 5])
 >>> duplicate_list.print_sorted()
 [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9, 9]
+
+#Test one element
+>>> one_element = MyList([3])
+>>> one_element.print_sorted()
+[3]
+
+# Same numbers
+>>> same = MyList([4, 4, 4])
+>>> same.print_sorted()
+[4, 4, 4]
