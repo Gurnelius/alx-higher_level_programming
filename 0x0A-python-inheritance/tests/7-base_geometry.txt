@@ -21,3 +21,15 @@ TypeError: test_var must be an integer
 Traceback (most recent call last):
   ...
 ValueError: test_var must be greater than 0
+
+# Test integer_validator method with no parameters
+>>> base_geometry.integer_validator()
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test notheing
+>>> base_geometry.integer_validator("class", None)
+Traceback (most recent call last):
+  ...
+TypeError: class must be an integer
