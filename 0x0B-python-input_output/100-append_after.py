@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     Inserts a line of text to a file, after each
-    line containing a specific string.
+    line containing a specific string. 
 '''
 
 
@@ -20,10 +20,10 @@ def append_after(filename="", search_string="", new_string=""):
     Returns:
         None
     """
-    with open(filename, 'r+') as file:
+    with open(filename, 'r') as file:
         lines = file.readlines()
-        file.seek(0)
 
+    with open(filename, 'w') as file:
         for line in lines:
             file.write(line)
             if search_string in line:
