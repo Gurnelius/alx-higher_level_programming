@@ -48,4 +48,4 @@ class Student:
             }
         else:
             # Only retrieve specified attributes from the list
-            return {a: getattr(self, a) for a in attrs if hasattr(self, attr)}
+            return {a: getattr(self, a) for a in attrs if hasattr(self, a)}
