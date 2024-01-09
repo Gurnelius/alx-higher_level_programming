@@ -6,6 +6,7 @@
 
 import json
 
+
 def load_from_json_file(filename):
     """
     Loads data from a JSON file and returns the
