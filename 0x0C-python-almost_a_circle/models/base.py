@@ -72,3 +72,51 @@ class Base:
 
         with open(filename, 'w') as file:
             file.write(js)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Class method that creates an instance with attributes set
+        from a dictionary using the update method.
+
+        Parameters:
+        - **dictionary: A double pointer to a dictionary.
+
+        Returns:
+        - instance: An instance of the class with attributes set
+        from the dictionary.
+
+        Example:
+        ```
+        dictionary = {'id': 1, 'width': 3, 'height': 8}
+        instance = Rectangle.create(**dictionary)
+        print(instance)
+        # Output: Rectangle instance with id=1, width=3, height=8
+        ```
+        """
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1, 1, 1, 1)
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1, 1, 1, 1)
+
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Class method that loads instances from a file in JSON format.
+
+        Returns:
+        - list: A list of instances.
+
+        """
+        filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, 'r') as file:
+                json_string = file.read()
+                list_dicts = cls.to_json_string(json_string)
+                return [cls.create(**dictionary) for dictionary in list_dicts]
+        except FileNotFoundError:
+            return []

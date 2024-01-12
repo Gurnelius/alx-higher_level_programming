@@ -136,7 +136,7 @@ class Square(Rectangle):
 
             Returns:
                 - dict: A dictionary representation of the square.
-        '''     a
+        '''
         square_dict = {
                 'id': self.id,
                 'x': self.x,
