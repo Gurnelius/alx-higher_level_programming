@@ -74,7 +74,7 @@ class Base:
             file.write(js)
 
     @staticmethod
-    def from_json_string(json_string="[]"):
+    def from_json_string(json_string):
         """
         Static method that returns a list of dictionaries
         from a JSON string representation.
@@ -86,7 +86,7 @@ class Base:
         - list: A list of dictionaries.
         """
         if json_string is None:
-            json_string = []
+            return []
         return json.loads(json_string)
 
     @classmethod
