@@ -132,7 +132,7 @@ class Base:
         try:
             with open(filename, 'r') as file:
                 json_string = file.read()
-                list_dicts = cls.to_json_string(json_string)
-                return [cls.create(**dictionary) for dictionary in list_dicts]
+                list_dicts = cls.from_json_string(json_string)
+                return list_dicts
         except FileNotFoundError:
             return []
