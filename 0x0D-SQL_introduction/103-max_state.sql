@@ -2,5 +2,6 @@
 -- Ordered by state name ascending
 SELECT state, MAX(value) as max_temp
 FROM temperatures
-ORDER BY state;
+GROUP BY state
+ORDER BY state ASC;
 
