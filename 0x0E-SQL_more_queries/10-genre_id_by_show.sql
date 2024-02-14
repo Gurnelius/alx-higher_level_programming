@@ -2,7 +2,7 @@
 -- that have at least one genre linked
 SELECT s.title, g.genre_id
 FROM tv_show AS s
-LEFT JOIN tv_show_genres AS g
+INNER JOIN tv_show_genres AS g
 ON g.show_id = s.id
-ORDER BY s.title, g.id;
+ORDER BY s.title ASC, g.id ASC;
 
