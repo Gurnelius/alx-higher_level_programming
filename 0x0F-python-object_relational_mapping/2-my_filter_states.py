@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     query = f'''
-    SELECT * 
+    SELECT *
     FROM states
     WHERE name like "{name}"
     ORDER BY id ASC
