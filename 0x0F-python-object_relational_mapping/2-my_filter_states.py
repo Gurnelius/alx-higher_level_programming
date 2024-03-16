@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 '''
-    takes in an argument and displays all values in the states table
+    Takes in an argument and displays all values in the states table
     of hbtn_0e_0_usa where name matches the argument.
 '''
+
+
 import sys
 import MySQLdb
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -22,12 +25,12 @@ if __name__ == "__main__":
         )
     cur = conn.cursor()
 
-    query = f'''
+    query = """
     SELECT *
     FROM states
-    WHERE name = "{name}"
+    WHERE name = '{}'
     ORDER BY id ASC
-    '''
+    """.format(name)
 
     cur.execute(query)
     query_rows = cur.fetchall()
