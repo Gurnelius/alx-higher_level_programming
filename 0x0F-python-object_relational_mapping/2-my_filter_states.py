@@ -25,7 +25,7 @@ if __name__ == "__main__":
     query = f'''
     SELECT *
     FROM states
-    WHERE name like "{name}"
+    WHERE name = "{name}"
     ORDER BY id ASC
     '''
 
