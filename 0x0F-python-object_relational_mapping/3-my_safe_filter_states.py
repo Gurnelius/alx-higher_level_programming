@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+'''
+    script that takes in arguments and displays all values in the states
+    table of hbtn_0e_0_usa where name matches the argument.
+    It is safe from MySQL injections.
+'''
+
+
 import sys
 import MySQLdb
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -21,7 +29,7 @@ if __name__ == "__main__":
     query = f'''
     SELECT *
     FROM states
-    WHERE name like %s
+    WHERE name like BINARY %s
     ORDER BY id ASC
     '''
 
