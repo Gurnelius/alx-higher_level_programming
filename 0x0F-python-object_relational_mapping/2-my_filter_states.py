@@ -28,7 +28,7 @@ if __name__ == "__main__":
     query = """
     SELECT *
     FROM states
-    WHERE name like '{}'
+    WHERE name like BINARY '{}'
     ORDER BY id ASC
     """.format(name)
 
