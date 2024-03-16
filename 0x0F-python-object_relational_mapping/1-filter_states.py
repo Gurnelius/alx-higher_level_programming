@@ -24,7 +24,7 @@ if __name__ == "__main__":
     query = '''
     SELECT *
     FROM states
-    WHERE name like "N%"
+    WHERE name like BINARY "N%"
     ORDER BY id ASC
     '''
 
