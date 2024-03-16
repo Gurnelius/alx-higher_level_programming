@@ -29,7 +29,7 @@ if __name__ == "__main__":
             FROM cities AS c
             JOIN states AS s
             ON s.id = c.state_id
-            WHERE s.name LIKE BINARY %s
+            WHERE s.name = %s
             ORDER BY c.id ASC
             '''
     cur.execute(query, (state,))
