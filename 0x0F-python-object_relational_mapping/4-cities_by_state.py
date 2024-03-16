@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+'''
+    Write a script that lists all cities from the database hbtn_0e_4_usa
+'''
+
+
 import sys
 import MySQLdb
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
