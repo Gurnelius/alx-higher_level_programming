@@ -23,7 +23,7 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
 
-    state = relationship("City", back_populates="cities")
+    state = relationship("State", back_populates="cities")
 
 if __name__ == "__main__":
     from sqlalchemy import create_engine
