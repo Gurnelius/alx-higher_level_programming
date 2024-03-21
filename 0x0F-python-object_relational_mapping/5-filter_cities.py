@@ -37,7 +37,7 @@ if __name__ == "__main__":
     city_names = ""
     for row in query_rows:
         city_names += row[0] + ", "
-        city_names = city_names.rstrip(", ")
+    city_names = city_names.rstrip(", ")
     print(city_names)
 
     cur.close()
