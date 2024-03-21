@@ -22,10 +22,10 @@ if __name__ == "__main__":
     query_count = session.query(State).count()
 
     result = session.query(State).order_by(State.id).first()
-    
-    if (result == None):
+
+    if (result is None):
         print("Nothing")
-    else: 
+    else:
         print("{}: {}".format(result.id, result.name))
 
     # Close the session
