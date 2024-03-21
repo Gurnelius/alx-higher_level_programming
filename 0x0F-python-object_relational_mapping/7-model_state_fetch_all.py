@@ -19,8 +19,11 @@ if __name__ == "__main__":
 
     results = session.query(State).order_by(State.id.asc()).all()
 
-    for result in results:
-        print("{}: {}".format(result.id, result.name))
+    if (len(results) == 0):
+        print("Nothing")
+    else:
+        for result in results:
+            print("{}: {}".format(result.id, result.name))
 
     # Close the session
     session.close()
