@@ -20,6 +20,4 @@ if __name__ == "__main__":
         user_id = user_info['id']
         print(user_id)
     else:
-        user_info = response.json()
-        user_id = user_info['id']
-        print(user_id)
+        print(None)
