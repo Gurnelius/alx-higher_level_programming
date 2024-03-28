@@ -5,10 +5,11 @@
 
 import requests
 
-url = "https://alx-intranet.hbtn.io/status"
+if __name__ == "__main__":
+    url = "https://alx-intranet.hbtn.io/status"
 
-with requests.get(url) as response:
-    body = response.content
-    print("Body response:")
-    print("\t- type:", type(body))
-    print("\t- content:", body)
+    with requests.get(url) as response:
+        body = response.content
+        print("Body response:")
+        print("\t- type:", type(body))
+        print("\t- content:", body)
