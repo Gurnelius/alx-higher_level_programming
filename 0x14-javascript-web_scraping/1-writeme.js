@@ -2,11 +2,10 @@
 
 const filesystem = require('fs');
 const file = process.argv[2];
+const content = process.argv[3];
 
-filesystem.readFile(file, 'utf-8', (error, content) => {
+filesystem.writeFile(file, content, 'utf-8', (error) => {
   if (error) {
     console.log(error);
-  } else {
-    console.log(content);
   }
 });
